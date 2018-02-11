@@ -4,67 +4,16 @@
 	<meta charset="UTF-8">
 	<title>Santuan</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script> 
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,700" rel="stylesheet">
  	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<style>
 
-	.logo {
-		animation-delay: .8s;
-	}
-
-	footer {
-		animation-delay: 1.2s;
-	}
-
-	h2 {
-		animation-delay: .3s;
-	}
-
-	.button {
-      cursor: pointer;
-    display: inline-block;
-    min-height: 1em;
-    outline: 0;
-    border: none;
-    vertical-align: baseline;
-    /* background: #e0e1e2 none; */
-    color: #fff;
-    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-    margin: 0 .25em 0 0;
-    padding: .78571429em 1.5em .78571429em;
-    text-transform: none;
-    text-shadow: none;
-    font-weight: 700;
-    line-height: 1em;
-    font-style: normal;
-    text-align: center;
-    text-decoration: none;
-    border-radius: .28571429rem;
-    box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34,36,38,.15) inset;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
-    transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
-    will-change: '';
-    -webkit-tap-highlight-color: transparent;
-    border: 2px solid #ddd;}
-</style>
 </head>
-<body style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; margin: 0; padding: 0;     background: #3086c1;">
-	<div class="logo animated slideInDown" style="
-    /* position: fixed; */
-    /* top: 0; */
-    background: #fff;    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.2);
-    padding: 5px 30px 15px 30px;
-    max-width: 190px;
-">
+<body>
+	<div class="logo animated slideInDown">
 		<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In  -->
-		<svg style="width: 200px;" version="1.1"
-			 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-			 x="0px" y="0px" width="189.5px" height="102.5px" viewBox="0 0 189.5 102.5" enable-background="new 0 0 189.5 102.5"
-			 xml:space="preserve">
+		<svg style="width: 200px;" x="0px" y="0px" width="189.5px" height="102.5px" viewBox="0 0 189.5 102.5" enable-background="new 0 0 189.5 102.5" xml:space="preserve">
 		<defs>
 		</defs>
 		<g>
@@ -165,27 +114,61 @@
 		</svg>
 	</div>
 
-	<h2 class="animated fadeIn" style="font-family: 'Alegreya Sans SC', sans-serif;color: #fff;max-width: 550px;text-align: center;font-weight: 100;padding-top: 5%;font-size: 49px;line-height: 55px;">
+
+
+	
+	<h2 class="animated fadeIn" style="font-family: 'Alegreya Sans SC', sans-serif;color: #fff;max-width: 550px;text-align: center;font-weight: 100;padding-top: 4%;font-size: 49px;line-height: 55px;">
 		un espacio de «diseño y software» libre
 	</h2>
 	
 	<div class="actions-buttons">
-		<a class="button animated fadeInDown" href="https://santuan.github.io/web/">Proyectos</a>
-		<a class="button animated fadeInDown" href="http://santuan.github.io/stn/">Colecciones</a>
+		<a id="domAttributes1" class="button animated fadeInDown" href="http://santuan.github.io/web/">
+			<input class="text-output" value="0"> 
+			Proyectos
+		</a>
+		<a id="domAttributes2" class="button animated fadeInDown" href="http://santuan.github.io/stn/">
+			<input class="text-output" value="0"> 
+			Colecciones
+		</a>
 	</div>
 
-	<div class="fullscreen-bg" style="position: fixed;top: 0;right: 0;bottom: 0;left: 0;overflow: hidden;z-index: -100;">
-   	 <video loop="" muted="" autoplay="" class="fullscreen-bg__video" style="    opacity: 0.7; position: absolute; top: 50%; left: 50%; width: auto; height: auto; min-width: 100%; min-height: 100%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+	<div class="fullscreen-bg">
+   	 <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
 	<source src="http://santuan.github.io/stn/img/back-stn-home.mp4" type="video/mp4">
     </video>
 	</div>
 
-	<footer class="animated slideInUp" style="
-    position: fixed;
-    bottom: -6px;
-    left: calc(50% - 200px);
-">	
+<footer class="animated slideInUp">	
 		<img src="http://santuan.github.io/stn/img/responsive.svg" alt="" width="400px">
 	</footer>
+
+	<script>
+		var lineDrawing = anime({
+		    targets: '#lineDrawing path',
+		    strokeDashoffset: [anime.setDashoffset, 0],
+		    easing: 'easeInOutSine',
+		    duration: 1500,
+		    opacity: 0,
+		    delay: function(el, i) { return i * 250 },
+		    direction: 'alternate',
+		    loop: true
+		  });
+
+		var domAttributes = anime({
+		  targets: '#domAttributes1 input',
+		  value: 12,
+		  duration: 2500,
+		  round: 1,
+		  easing: 'easeInOutSine'
+		});
+
+		var domAttributes = anime({
+		  targets: '#domAttributes2 input',
+		  value: 30,
+		  duration: 3500,
+		  round: 1,
+		  easing: 'easeInOutSine'
+		});
+  	</script>
 </body>
 </html>
