@@ -26,7 +26,9 @@ body {
 }
  h2 {
      animation-delay: .3s;
+     font-family: 'Alegreya Sans SC', sans-serif;color: #fff;max-width: 550px;text-align: center;font-weight: 100;padding-top: 4%;font-size: 49px;line-height: 55px;
 }
+
  input {
      background: none;
      border: 0;
@@ -37,6 +39,8 @@ body {
      margin-right: 15px;
      font-size: 16px;
      font-weight: 600;
+     pointer-events: none;
+     cursor: none;
 }
  .button {
      cursor: pointer;
@@ -96,4 +100,31 @@ body {
      position: fixed;
      bottom: -6px;
      left: calc(50% - 200px);
+}
+
+@media all and (max-width: 400px) {
+ h2 {
+    font-size: 40px !important;
+ }
+
+ .actions-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    
+ }
+
+ .actions-buttons a {
+        margin: 15px;
+    }
+
+ footer {
+    position: relative;
+    left: calc(50% - 172px);
+ }
+
+ footer img {
+    width: 300px;
+ }
 }
